@@ -1,10 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0sk2kg1kgla4"]
+[gd_scene load_steps=8 format=3 uid="uid://b0sk2kg1kgla4"]
 
 [ext_resource type="PackedScene" uid="uid://bj38nf5jxbk2a" path="res://Scenes/Player.tscn" id="1_gm6gb"]
-[ext_resource type="Texture2D" uid="uid://q066klwb1pa6" path="res://icon.svg" id="2_rpqdd"]
+[ext_resource type="Texture2D" uid="uid://bthotuqr0efu" path="res://Assets/pixil-frame-0.png" id="2_6ln60"]
+[ext_resource type="Texture2D" uid="uid://duhrjix1qe4wn" path="res://Assets/FreeCuteTileset/BG3.png" id="3_7ehv1"]
+[ext_resource type="Texture2D" uid="uid://kr31eo8w7hx4" path="res://Assets/FreeCuteTileset/BG2.png" id="4_dim6g"]
+[ext_resource type="Texture2D" uid="uid://dj6qi7eh0lg1m" path="res://Assets/FreeCuteTileset/BG1.png" id="5_2mci4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yk282"]
-texture = ExtResource("2_rpqdd")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7lf4s"]
+texture = ExtResource("2_6ln60")
+separation = Vector2i(128, 128)
+texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -70,17 +75,35 @@ texture = ExtResource("2_rpqdd")
 6:7/0 = 0
 7:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_p4vub"]
-sources/0 = SubResource("TileSetAtlasSource_yk282")
+[sub_resource type="TileSet" id="TileSet_gk4qh"]
+sources/0 = SubResource("TileSetAtlasSource_7lf4s")
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_gm6gb")]
-position = Vector2(572, 306)
+position = Vector2(-34, 126)
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
-tile_set = SubResource("TileSet_p4vub")
+position = Vector2(2, -28)
+tile_set = SubResource("TileSet_gk4qh")
 rendering_quadrant_size = 128
 format = 2
-layer_0/tile_data = PackedInt32Array(2818102, 65536, 2, 2883638, 65536, 3, 2949174, 65536, 4, 3014710, 65536, 5, 2818103, 131072, 2, 2883639, 131072, 3, 2949175, 131072, 4, 3014711, 131072, 5, 2818104, 196608, 2, 2883640, 196608, 3, 2949176, 196608, 4, 3014712, 196608, 5, 2818105, 262144, 2, 2883641, 262144, 3, 2949177, 262144, 4, 3014713, 262144, 5, 2818106, 327680, 2, 2883642, 327680, 3, 2949178, 327680, 4, 3014714, 327680, 5, 2818107, 393216, 2, 2883643, 393216, 3, 2949179, 393216, 4, 3014715, 393216, 5, 1704000, 65536, 2, 1769536, 65536, 3, 1835072, 65536, 4, 1900608, 65536, 5, 1704001, 131072, 2, 1769537, 131072, 3, 1835073, 131072, 4, 1900609, 131072, 5, 1704002, 196608, 2, 1769538, 196608, 3, 1835074, 196608, 4, 1900610, 196608, 5, 1704003, 262144, 2, 1769539, 262144, 3, 1835075, 262144, 4, 1900611, 262144, 5, 1704004, 327680, 2, 1769540, 327680, 3, 1835076, 327680, 4, 1900612, 327680, 5, 1704005, 393216, 2, 1769541, 393216, 3, 1835077, 393216, 4, 1900613, 393216, 5)
+layer_0/tile_data = PackedInt32Array(4718595, 0, 0, 4718603, 0, 0, 4718611, 0, 0, 4718619, 0, 0, 4718627, 0, 0, 4718635, 0, 0, 4718643, 0, 0, 4718651, 0, 0, 4718659, 0, 0, 4718667, 0, 0, 4718675, 0, 0, 4718682, 0, 0, 4718690, 0, 0, 4718695, 0, 0, 4718703, 0, 0, 4718707, 0, 0, 4718714, 0, 0, 4718719, 0, 0, 4718722, 0, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(1120, 554)
+scale = Vector2(7, 7)
+texture = ExtResource("3_7ehv1")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D2"]
+show_behind_parent = true
+position = Vector2(-1.52588e-05, -14.5714)
+scale = Vector2(1, 1)
+texture = ExtResource("4_dim6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/Sprite2D3"]
+show_behind_parent = true
+position = Vector2(-0.571381, -14.8571)
+scale = Vector2(1, 1)
+texture = ExtResource("5_2mci4")
