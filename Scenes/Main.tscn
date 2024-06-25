@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0sk2kg1kgla4"]
+[gd_scene load_steps=11 format=3 uid="uid://b0sk2kg1kgla4"]
 
 [ext_resource type="PackedScene" uid="uid://bj38nf5jxbk2a" path="res://Scenes/Player.tscn" id="1_gm6gb"]
 [ext_resource type="Texture2D" uid="uid://bthotuqr0efu" path="res://Assets/pixil-frame-0.png" id="2_6ln60"]
 [ext_resource type="Texture2D" uid="uid://duhrjix1qe4wn" path="res://Assets/FreeCuteTileset/BG3.png" id="3_7ehv1"]
 [ext_resource type="Texture2D" uid="uid://kr31eo8w7hx4" path="res://Assets/FreeCuteTileset/BG2.png" id="4_dim6g"]
 [ext_resource type="Texture2D" uid="uid://dj6qi7eh0lg1m" path="res://Assets/FreeCuteTileset/BG1.png" id="5_2mci4"]
+[ext_resource type="PackedScene" uid="uid://bn86q1833h8it" path="res://Scenes/fruit1.tscn" id="6_vl8xd"]
+[ext_resource type="Script" path="res://Scripts/ground.gd" id="7_6l2jp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7lf4s"]
 texture = ExtResource("2_6ln60")
@@ -78,6 +80,9 @@ texture_region_size = Vector2i(128, 128)
 [sub_resource type="TileSet" id="TileSet_gk4qh"]
 sources/0 = SubResource("TileSetAtlasSource_7lf4s")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkejv"]
+size = Vector2(2140, 123)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_gm6gb")]
@@ -107,3 +112,13 @@ show_behind_parent = true
 position = Vector2(-0.571381, -14.8571)
 scale = Vector2(1, 1)
 texture = ExtResource("5_2mci4")
+
+[node name="Fruit1" parent="." instance=ExtResource("6_vl8xd")]
+position = Vector2(1082, 85)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("7_6l2jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1074, 1135.5)
+shape = SubResource("RectangleShape2D_xkejv")
