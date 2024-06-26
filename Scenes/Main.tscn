@@ -89,7 +89,7 @@ size = Vector2(2140, 123)
 position = Vector2(-34, 126)
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(2, -28)
+position = Vector2(462, 220)
 tile_set = SubResource("TileSet_gk4qh")
 rendering_quadrant_size = 128
 format = 2
