@@ -188,7 +188,7 @@ sources/0 = SubResource("TileSetAtlasSource_1mg31")
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_2npij")]
-position = Vector2(450, 710)
+position = Vector2(970, 334)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -227,13 +227,13 @@ unique_name_in_owner = true
 script = ExtResource("5_sl0gi")
 
 [node name="Melon" parent="." instance=ExtResource("4_r3cxf")]
-position = Vector2(1155, 541)
+position = Vector2(1507, 989)
 
 [node name="Melon2" parent="." instance=ExtResource("4_r3cxf")]
-position = Vector2(1288, 541)
+position = Vector2(3376, 1037)
 
 [node name="Melon3" parent="." instance=ExtResource("4_r3cxf")]
-position = Vector2(1425, 541)
+position = Vector2(1737, 1061)
 
 [node name="TutUI" type="Node" parent="."]
 
@@ -378,10 +378,10 @@ scale = Vector2(4, 4)
 texture = ExtResource("12_fg2fp")
 
 [node name="Kiwi" parent="." instance=ExtResource("8_mlxgs")]
-position = Vector2(3401, 553)
+position = Vector2(3265, 1209)
 
 [node name="Pineapple" parent="." instance=ExtResource("6_fwnf1")]
-position = Vector2(2236, 544)
+position = Vector2(1948, 1208)
 
 [node name="Strawberry" parent="." instance=ExtResource("7_rgco7")]
-position = Vector2(2824, 547)
+position = Vector2(2616, 1403)
