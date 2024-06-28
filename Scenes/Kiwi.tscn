@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://cbk6yjkwwm2cn"]
+[gd_scene load_steps=22 format=3 uid="uid://cbk6yjkwwm2cn"]
 
 [ext_resource type="Texture2D" uid="uid://desjgj71xmm1y" path="res://Assets/Kiwi.png" id="1_8vfmv"]
+[ext_resource type="Script" path="res://Scripts/Kiwi.gd" id="1_wepij"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_omm5f"]
 atlas = ExtResource("1_8vfmv")
@@ -133,13 +134,16 @@ animations = [{
 radius = 29.0689
 
 [node name="Kiwi" type="Area2D"]
+script = ExtResource("1_wepij")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_aj0co")
 autoplay = "default"
-frame_progress = 0.693984
+frame_progress = 0.704427
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_oa32n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

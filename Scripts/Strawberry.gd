@@ -4,5 +4,7 @@ extends Area2D
 
 func _on_body_entered(body):
 	if (body.name == "Player"):
-		player.SPEED = 1000
+		player.JUMP_VELOCITY = -1300
 		queue_free()
+		
+# 17 when speed+jump increased

@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 500.0
-const JUMP_VELOCITY = -900.0
+var SPEED = 500.0
+var JUMP_VELOCITY = -900.0
 @onready var sprite_2d = $Hi
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -31,3 +31,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	sprite_2d.flip_h = IS_LEFT
+	
+func _process(delta):
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()

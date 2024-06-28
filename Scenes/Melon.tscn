@@ -130,8 +130,8 @@ animations = [{
 "speed": 14.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qi4mk"]
-size = Vector2(21, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7r22"]
+size = Vector2(88, 61.25)
 
 [node name="Melon" type="Area2D"]
 script = ExtResource("1_ahj5x")
@@ -144,7 +144,7 @@ autoplay = "default"
 frame_progress = 0.152219
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -1)
-shape = SubResource("RectangleShape2D_qi4mk")
+position = Vector2(1, 1.375)
+shape = SubResource("RectangleShape2D_s7r22")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
