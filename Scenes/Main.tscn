@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0sk2kg1kgla4"]
+[gd_scene load_steps=7 format=3 uid="uid://b0sk2kg1kgla4"]
 
 [ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="1_gm6gb"]
 [ext_resource type="Texture2D" uid="uid://dk1w5jqlv8xht" path="res://Assets/FreeCuteTileset/Tileset.png" id="2_31ccc"]
-[ext_resource type="Texture2D" uid="uid://duhrjix1qe4wn" path="res://Assets/FreeCuteTileset/BG3.png" id="3_7ehv1"]
-[ext_resource type="Texture2D" uid="uid://kr31eo8w7hx4" path="res://Assets/FreeCuteTileset/BG2.png" id="4_dim6g"]
-[ext_resource type="Texture2D" uid="uid://dj6qi7eh0lg1m" path="res://Assets/FreeCuteTileset/BG1.png" id="5_2mci4"]
+[ext_resource type="PackedScene" uid="uid://4cda0pg0r3ve" path="res://Scenes/Melon.tscn" id="4_6nlp0"]
+[ext_resource type="Texture2D" uid="uid://cvghtchjyrrot" path="res://Assets/Brown.png" id="6_c1cn2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mg31"]
 texture = ExtResource("2_31ccc")
@@ -175,26 +174,7 @@ sources/0 = SubResource("TileSetAtlasSource_1mg31")
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_gm6gb")]
-position = Vector2(942, 206)
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-show_behind_parent = true
-texture_filter = 1
-position = Vector2(1092, 517)
-scale = Vector2(7, 7)
-texture = ExtResource("3_7ehv1")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D2"]
-show_behind_parent = true
-texture_filter = 1
-position = Vector2(1.14285, -14.5714)
-texture = ExtResource("4_dim6g")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/Sprite2D3"]
-show_behind_parent = true
-texture_filter = 1
-position = Vector2(-0.571433, 0.285678)
-texture = ExtResource("5_2mci4")
+position = Vector2(248, 814)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -202,4 +182,37 @@ position = Vector2(-4, -2)
 scale = Vector2(5, 5)
 tile_set = SubResource("TileSet_ewcvf")
 format = 2
-layer_0/tile_data = PackedInt32Array(720897, 65536, 0, 720898, 65536, 0, 720899, 65536, 0, 720900, 65536, 0, 720901, 65536, 0, 720902, 65536, 0, 720903, 65536, 0, 393229, 65536, 0, 393230, 65536, 0, 393231, 65536, 0, 393232, 65536, 0, 393233, 65536, 0, 393234, 65536, 0, 393235, 65536, 0, 589844, 65536, 0, 589845, 65536, 0, 589846, 65536, 0, 589847, 65536, 0, 589833, 65536, 0, 589834, 65536, 0, 524299, 65536, 0, 589835, 327680, 0, 589836, 327680, 0, 655370, 327680, 0)
+layer_0/tile_data = PackedInt32Array(720897, 65536, 0, 720898, 65536, 0, 720899, 65536, 0, 720900, 65536, 0, 720901, 65536, 0, 720902, 65536, 0, 720903, 65536, 0, 393229, 65536, 0, 393230, 65536, 0, 393231, 65536, 0, 393232, 65536, 0, 393233, 65536, 0, 393234, 65536, 0, 393235, 65536, 0, 589844, 65536, 0, 589845, 65536, 0, 589846, 65536, 0, 589847, 65536, 0, 589833, 65536, 0, 589834, 65536, 0, 524299, 65536, 0, 589835, 327680, 0, 589836, 327680, 0, 655370, 327680, 0, 0, 327680, 0, 65536, 327680, 0, 131072, 327680, 0, 196608, 327680, 0, 262144, 327680, 0, 327680, 327680, 0, 393216, 327680, 0, 458752, 327680, 0, 524288, 327680, 0, 589824, 327680, 0, 655360, 327680, 0, 720896, 327680, 0, 786432, 327680, 0, 851968, 327680, 0, 917504, 327680, 0, 917505, 327680, 0, 917506, 327680, 0, 917507, 327680, 0, 917508, 327680, 0, 917509, 327680, 0, 917510, 327680, 0, 917511, 327680, 0, 917512, 327680, 0, 917513, 327680, 0, 917514, 327680, 0, 917515, 327680, 0, 917516, 327680, 0, 917517, 327680, 0, 917518, 327680, 0, 917519, 327680, 0, 917520, 327680, 0, 917521, 327680, 0, 917522, 327680, 0, 917523, 327680, 0, 917524, 327680, 0, 917525, 327680, 0, 917526, 327680, 0, 917527, 327680, 0, 917528, 327680, 0, 917529, 327680, 0, 917530, 327680, 0, 26, 327680, 0, 25, 327680, 0, 24, 327680, 0, 23, 327680, 0, 22, 327680, 0, 21, 327680, 0, 20, 327680, 0, 19, 327680, 0, 18, 327680, 0, 17, 327680, 0, 16, 327680, 0, 15, 327680, 0, 14, 327680, 0, 13, 327680, 0, 12, 327680, 0, 11, 327680, 0, 10, 327680, 0, 9, 327680, 0, 8, 327680, 0, 7, 327680, 0, 6, 327680, 0, 5, 327680, 0, 4, 327680, 0, 3, 327680, 0, 2, 327680, 0, 1, 327680, 0, 65562, 327680, 0, 131098, 327680, 0, 196634, 327680, 0, 262170, 327680, 0, 327706, 327680, 0, 393242, 327680, 0, 458778, 327680, 0, 524314, 327680, 0, 589850, 327680, 0, 655386, 327680, 0, 720922, 327680, 0, 786458, 327680, 0, 851994, 327680, 0)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 2158.0
+offset_bottom = 1196.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_c1cn2")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1830.0
+offset_top = -992.0
+offset_right = -1738.0
+offset_bottom = -913.0
+scale = Vector2(64.4575, 40.8698)
+color = Color(0, 0, 0, 1)
+
+[node name="Melon" parent="." instance=ExtResource("4_6nlp0")]
+position = Vector2(1140, 396)
+
+[node name="Melon2" parent="." instance=ExtResource("4_6nlp0")]
+position = Vector2(1322, 396)
+
+[node name="Melon3" parent="." instance=ExtResource("4_6nlp0")]
+position = Vector2(1504, 396)
