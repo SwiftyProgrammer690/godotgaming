@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="BirdGunner"
-run/main_scene="res://Scenes/Main.tscn"
+config/name="Melon Rush"
+run/main_scene="res://Scenes/Level1.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

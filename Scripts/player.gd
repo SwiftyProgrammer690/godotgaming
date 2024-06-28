@@ -3,12 +3,13 @@ extends CharacterBody2D
 
 const SPEED = 500.0
 const JUMP_VELOCITY = -900.0
-@onready var sprite_2d = $Sprite2D
+@onready var sprite_2d = $Hi
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-
 func _physics_process(delta):
+	var IS_LEFT = velocity.x < 0
+	
 	if (velocity.x < 0 || velocity.x > 0):
 		sprite_2d.animation = "running"
 	else:
@@ -29,5 +30,4 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	var IS_LEFT = velocity.x < 0
 	sprite_2d.flip_h = IS_LEFT

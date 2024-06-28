@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://dtpmt7hwxcddu"
+path="res://.godot/imported/run.png-74480e78025c7fbef5fe420ab736a30f.image"
+
+[deps]
+
+source_file="res://Assets/run.png"
+dest_files=["res://.godot/imported/run.png-74480e78025c7fbef5fe420ab736a30f.image"]
+
+[params]
+

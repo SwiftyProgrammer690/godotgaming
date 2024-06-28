@@ -120,13 +120,11 @@ size = Vector2(58, 81)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xheid")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Hi" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_f2363")
-animation = &"jumping"
 autoplay = "default"
-frame_progress = 0.703975
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, 2.5)

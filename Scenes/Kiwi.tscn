@@ -1,0 +1,145 @@
+[gd_scene load_steps=21 format=3 uid="uid://cbk6yjkwwm2cn"]
+
+[ext_resource type="Texture2D" uid="uid://desjgj71xmm1y" path="res://Assets/Kiwi.png" id="1_8vfmv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omm5f"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oegr7"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tk7o"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5phy"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkk5d"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlhg4"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycut5"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jix0w"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp500"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddgqv"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqdxa"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_400np"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0p1q"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es5je"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyq6a"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44ews"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6hw0"]
+atlas = ExtResource("1_8vfmv")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aj0co"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omm5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oegr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tk7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5phy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkk5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlhg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycut5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jix0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp500")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddgqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqdxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_400np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0p1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es5je")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eyq6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44ews")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6hw0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oa32n"]
+radius = 29.0689
+
+[node name="Kiwi" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_aj0co")
+autoplay = "default"
+frame_progress = 0.693984
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oa32n")
