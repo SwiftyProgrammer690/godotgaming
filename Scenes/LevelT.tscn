@@ -189,6 +189,7 @@ sources/0 = SubResource("TileSetAtlasSource_1mg31")
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_35rep")]
+top_level = true
 position = Vector2(450, 710)
 
 [node name="TileMap" type="TileMap" parent="."]
