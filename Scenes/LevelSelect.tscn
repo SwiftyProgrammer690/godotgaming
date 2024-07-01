@@ -25,6 +25,7 @@ texture = ExtResource("1_nhc5l")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0.376471, 0.376471, 0.376471, 1)
+layout_mode = 0
 offset_left = 464.0
 offset_top = 176.0
 offset_right = 1776.0
@@ -35,6 +36,7 @@ text = "Level select"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 modulate = Color(0.376471, 0.376471, 0.376471, 1)
+layout_mode = 0
 offset_left = 714.0
 offset_top = 384.0
 offset_right = 2026.0
@@ -47,6 +49,7 @@ Level"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
 modulate = Color(0.376471, 0.376471, 0.376471, 1)
+layout_mode = 0
 offset_left = 556.0
 offset_top = 968.0
 offset_right = 1868.0
@@ -58,6 +61,7 @@ text = "Challenge
 Levels"
 
 [node name="Button2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 147.0
 offset_top = 696.0
 offset_right = 307.0
@@ -69,6 +73,7 @@ script = ExtResource("3_scggp")
 
 [node name="Button11" type="Button" parent="."]
 modulate = Color(0.988235, 0.454902, 0.388235, 1)
+layout_mode = 0
 offset_left = 959.0
 offset_top = 956.0
 offset_right = 1119.0
@@ -78,6 +83,7 @@ theme_override_font_sizes/font_size = 40
 text = "1"
 
 [node name="Button10" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1183.0
 offset_top = 374.0
 offset_right = 1343.0
@@ -88,6 +94,7 @@ text = "T"
 script = ExtResource("3_qehwu")
 
 [node name="Button3" type="Button" parent="."]
+layout_mode = 0
 offset_left = 381.0
 offset_top = 694.0
 offset_right = 541.0
@@ -98,6 +105,7 @@ text = "2"
 
 [node name="Button12" type="Button" parent="."]
 modulate = Color(0.988235, 0.454902, 0.388235, 1)
+layout_mode = 0
 offset_left = 1173.0
 offset_top = 956.0
 offset_right = 1333.0
@@ -107,6 +115,7 @@ theme_override_font_sizes/font_size = 40
 text = "2"
 
 [node name="Button4" type="Button" parent="."]
+layout_mode = 0
 offset_left = 607.0
 offset_top = 694.0
 offset_right = 767.0
@@ -117,6 +126,7 @@ text = "3"
 
 [node name="Button13" type="Button" parent="."]
 modulate = Color(0.988235, 0.454902, 0.388235, 1)
+layout_mode = 0
 offset_left = 1389.0
 offset_top = 958.0
 offset_right = 1549.0
@@ -126,6 +136,7 @@ theme_override_font_sizes/font_size = 40
 text = "3"
 
 [node name="Button5" type="Button" parent="."]
+layout_mode = 0
 offset_left = 845.0
 offset_top = 694.0
 offset_right = 1005.0
@@ -135,6 +146,7 @@ theme_override_font_sizes/font_size = 40
 text = "4"
 
 [node name="Button6" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1081.0
 offset_top = 694.0
 offset_right = 1241.0
@@ -144,6 +156,7 @@ theme_override_font_sizes/font_size = 40
 text = "5"
 
 [node name="Button7" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1330.0
 offset_top = 694.0
 offset_right = 1490.0
@@ -153,6 +166,7 @@ theme_override_font_sizes/font_size = 40
 text = "6"
 
 [node name="Button8" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1567.0
 offset_top = 694.0
 offset_right = 1727.0
@@ -162,6 +176,7 @@ theme_override_font_sizes/font_size = 40
 text = "7"
 
 [node name="Button9" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1799.0
 offset_top = 694.0
 offset_right = 1959.0
