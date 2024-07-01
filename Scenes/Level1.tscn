@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://pgg2vj5584kp" path="res://Scenes/Strawberry.tscn" id="7_rgco7"]
 [ext_resource type="PackedScene" uid="uid://cbk6yjkwwm2cn" path="res://Scenes/Kiwi.tscn" id="8_mlxgs"]
 [ext_resource type="PackedScene" uid="uid://ds37wqovita3t" path="res://Scenes/flag.tscn" id="11_7tvqw"]
-[ext_resource type="PackedScene" uid="uid://cjyw055yjicyr" path="res://Scenes/LevelSelect.tscn" id="12_s4hpt"]
+[ext_resource type="PackedScene" uid="uid://dq0v5b0lbej6" path="res://Scenes/Level2.tscn" id="12_hmw7r"]
 [ext_resource type="Script" path="res://Scripts/level1death.gd" id="14_wah5y"]
 [ext_resource type="Texture2D" uid="uid://8s5ouwfvydxb" path="res://Assets/pixil-frame-0.png" id="19_nba5n"]
 
@@ -355,7 +355,7 @@ to reset"
 
 [node name="FlagBearerPiper" parent="." instance=ExtResource("11_7tvqw")]
 position = Vector2(3662, 404)
-nxtLevel = ExtResource("12_s4hpt")
+nxtLevel = ExtResource("12_hmw7r")
 
 [node name="level1death" type="Area2D" parent="."]
 script = ExtResource("14_wah5y")
