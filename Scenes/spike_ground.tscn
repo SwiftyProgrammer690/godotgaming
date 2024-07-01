@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://bpoxcqm82ynx"]
+
+[ext_resource type="Texture2D" uid="uid://c6v6m172dbom7" path="res://Assets/Spike_B.png" id="1_n3jhq"]
+[ext_resource type="Script" path="res://Scripts/spike_ground.gd" id="1_w4s0m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5stg"]
+atlas = ExtResource("1_n3jhq")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohc1d"]
+atlas = ExtResource("1_n3jhq")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2s6c"]
+atlas = ExtResource("1_n3jhq")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4ul8"]
+atlas = ExtResource("1_n3jhq")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3otaf"]
+atlas = ExtResource("1_n3jhq")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7tln"]
+atlas = ExtResource("1_n3jhq")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h1ksr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5stg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohc1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2s6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4ul8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3otaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7tln")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7jus"]
+size = Vector2(158.5, 63.5)
+
+[node name="Spike_Ground" type="Area2D"]
+script = ExtResource("1_w4s0m")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_h1ksr")
+autoplay = "default"
+frame_progress = 0.221767
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.75, -3.25)
+shape = SubResource("RectangleShape2D_j7jus")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

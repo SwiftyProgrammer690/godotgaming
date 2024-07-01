@@ -39,3 +39,7 @@ func _physics_process(delta):
 func _process(delta):
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
+
+
+func _on_spike_ground_body_entered(body):
+	sprite_2d.animation = "damaged"
