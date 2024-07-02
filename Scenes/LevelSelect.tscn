@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bgp6rgnwqw5jr" path="res://Assets/GravityRegular5.ttf" id="2_x1w68"]
 [ext_resource type="Script" path="res://Scripts/levelselectT.gd" id="3_qehwu"]
 [ext_resource type="Script" path="res://Scripts/levelselect1.gd" id="3_scggp"]
-[ext_resource type="Script" path="res://Scripts/Button3.gd" id="5_0hv3y"]
+[ext_resource type="Script" path="res://Scripts/levelselect2.gd" id="5_y0dws"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -103,7 +103,7 @@ offset_bottom = 858.0
 theme_override_fonts/font = ExtResource("2_x1w68")
 theme_override_font_sizes/font_size = 40
 text = "2"
-script = ExtResource("5_0hv3y")
+script = ExtResource("5_y0dws")
 
 [node name="Button12" type="Button" parent="."]
 modulate = Color(0.988235, 0.454902, 0.388235, 1)
@@ -189,4 +189,4 @@ text = "8"
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
 [connection signal="pressed" from="Button10" to="Button10" method="_on_pressed"]
-[connection signal="pressed" from="Button3" to="Button2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

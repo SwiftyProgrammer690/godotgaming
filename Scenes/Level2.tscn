@@ -350,7 +350,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_lqqnj")]
 top_level = true
-position = Vector2(196, 637)
+position = Vector2(604, 831)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -441,6 +441,23 @@ rotation = 3.14159
 [node name="Spike_Ground2" parent="." instance=ExtResource("8_fwcq8")]
 position = Vector2(2162, 525)
 rotation = 3.14159
+
+[node name="Spike_Ground3" parent="." instance=ExtResource("8_fwcq8")]
+position = Vector2(3530, 1091)
+rotation = 6.27844
+
+[node name="Spike_Ground4" parent="." instance=ExtResource("8_fwcq8")]
+position = Vector2(3692, 1090)
+rotation = 6.27844
+
+[node name="Spike_Ground5" parent="." instance=ExtResource("8_fwcq8")]
+position = Vector2(3852, 1089)
+rotation = 6.27844
+
+[node name="Spike_Ground6" parent="." instance=ExtResource("8_fwcq8")]
+show_behind_parent = true
+position = Vector2(4014, 1088)
+rotation = 6.27844
 
 [node name="Strawberry" parent="." instance=ExtResource("8_hcv1v")]
 position = Vector2(597, 325)
