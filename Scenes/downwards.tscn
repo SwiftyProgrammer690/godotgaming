@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://rr182n834wy4"]
+
+[ext_resource type="AudioStream" uid="uid://orntju4goffc" path="res://Assets/Music + SFX/downwards.wav" id="1_ri0go"]
+
+[node name="Downwards" type="AudioStreamPlayer"]
+stream = ExtResource("1_ri0go")
+autoplay = true
