@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcyxhfv7godui"]
+
+[ext_resource type="Script" path="res://Scripts/GMelon.gd" id="1_2xrq1"]
+[ext_resource type="Texture2D" uid="uid://p4cjt8yf5ime" path="res://Assets/Slime/Melon.png" id="1_gak3m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sya27"]
+atlas = ExtResource("1_gak3m")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2121"]
+atlas = ExtResource("1_gak3m")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7vrl"]
+atlas = ExtResource("1_gak3m")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y5dcm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sya27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2121")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7vrl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyyro"]
+size = Vector2(45, 74)
+
+[node name="GMelon" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_2xrq1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_y5dcm")
+autoplay = "default"
+frame_progress = 0.842128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_iyyro")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
