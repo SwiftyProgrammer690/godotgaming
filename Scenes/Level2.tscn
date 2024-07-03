@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dq0v5b0lbej6"]
+[gd_scene load_steps=24 format=3 uid="uid://dq0v5b0lbej6"]
 
 [ext_resource type="Texture2D" uid="uid://di4xj5ek1hj5n" path="res://Assets/Yellow.png" id="1_qsmv0"]
 [ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="2_lqqnj"]
@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://d4ckwmgeao7yw" path="res://Assets/FreeCuteTileset/Dungeon Tile Set.png" id="11_trp7d"]
 [ext_resource type="Script" path="res://Scripts/WorldBoundary.gd" id="13_hb2gp"]
 [ext_resource type="PackedScene" uid="uid://cmtrllk2ebu3w" path="res://Scenes/Level3.tscn" id="15_25f8r"]
+[ext_resource type="AudioStream" uid="uid://crk762axdqn34" path="res://Assets/Music + SFX/superskibidi.wav" id="16_u3url"]
+[ext_resource type="AudioStream" uid="uid://oh0ixxo5jdep" path="res://Assets/Music + SFX/sound (2).wav" id="17_fdnkf"]
+[ext_resource type="AudioStream" uid="uid://bfo87ryl1tvar" path="res://Assets/Music + SFX/hitHurt.wav" id="18_1urcy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mg31"]
 texture = ExtResource("3_no8tf")
@@ -507,5 +510,17 @@ shape = SubResource("WorldBoundaryShape2D_r5hxk")
 [node name="FlagBearerPiper" parent="." instance=ExtResource("11_aevxr")]
 position = Vector2(4603, 718)
 nxtLevel = ExtResource("15_25f8r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_u3url")
+autoplay = true
+
+[node name="PickUp" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("17_fdnkf")
+
+[node name="boom" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("18_1urcy")
 
 [connection signal="body_entered" from="WorldBoundary" to="WorldBoundary" method="_on_body_entered"]

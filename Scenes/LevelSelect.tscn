@@ -1,15 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://cjyw055yjicyr"]
+[gd_scene load_steps=13 format=3 uid="uid://cjyw055yjicyr"]
 
+[ext_resource type="Script" path="res://Scripts/controlmusic.gd" id="1_jkag3"]
 [ext_resource type="Texture2D" uid="uid://di4xj5ek1hj5n" path="res://Assets/Yellow.png" id="1_nhc5l"]
 [ext_resource type="FontFile" uid="uid://bgp6rgnwqw5jr" path="res://Assets/GravityRegular5.ttf" id="2_x1w68"]
 [ext_resource type="Script" path="res://Scripts/levelselectT.gd" id="3_qehwu"]
 [ext_resource type="Script" path="res://Scripts/levelselect1.gd" id="3_scggp"]
 [ext_resource type="Script" path="res://Scripts/levelselect2.gd" id="5_y0dws"]
-[ext_resource type="Script" path="res://levelselect3.gd" id="6_a751i"]
+[ext_resource type="Script" path="res://Scripts/levelselect3.gd" id="6_a751i"]
 [ext_resource type="Script" path="res://Scripts/Button.gd" id="7_1l13p"]
 [ext_resource type="Script" path="res://Scripts/Button5.gd" id="7_sdihn"]
 [ext_resource type="Script" path="res://Scripts/Button6.gd" id="8_q5r82"]
 [ext_resource type="Script" path="res://Scripts/Button7.gd" id="9_jqyjp"]
+[ext_resource type="AudioStream" uid="uid://bq5f8brqs13k4" path="res://Assets/Music + SFX/menu11.wav" id="12_moxoa"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -18,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jkag3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -156,6 +159,10 @@ theme_override_fonts/font = ExtResource("2_x1w68")
 theme_override_font_sizes/font_size = 40
 text = "Back"
 script = ExtResource("7_1l13p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_moxoa")
+autoplay = true
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
 [connection signal="pressed" from="Button10" to="Button10" method="_on_pressed"]

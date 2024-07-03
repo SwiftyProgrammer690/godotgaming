@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cr6bog1ihttw7"]
+[gd_scene load_steps=19 format=3 uid="uid://cr6bog1ihttw7"]
 
 [ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="1_2npij"]
 [ext_resource type="Texture2D" uid="uid://dk1w5jqlv8xht" path="res://Assets/FreeCuteTileset/Tileset.png" id="2_jayat"]
@@ -11,7 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://cbk6yjkwwm2cn" path="res://Scenes/Kiwi.tscn" id="8_mlxgs"]
 [ext_resource type="PackedScene" uid="uid://ds37wqovita3t" path="res://Scenes/flag.tscn" id="11_7tvqw"]
 [ext_resource type="PackedScene" uid="uid://dq0v5b0lbej6" path="res://Scenes/Level2.tscn" id="12_hmw7r"]
+[ext_resource type="AudioStream" uid="uid://crk762axdqn34" path="res://Assets/Music + SFX/superskibidi.wav" id="14_hojo7"]
 [ext_resource type="Script" path="res://Scripts/level1death.gd" id="14_wah5y"]
+[ext_resource type="AudioStream" uid="uid://oh0ixxo5jdep" path="res://Assets/Music + SFX/sound (2).wav" id="15_wdn40"]
 [ext_resource type="Texture2D" uid="uid://8s5ouwfvydxb" path="res://Assets/pixil-frame-0.png" id="19_nba5n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mg31"]
@@ -363,5 +365,13 @@ script = ExtResource("14_wah5y")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level1death"]
 position = Vector2(990, 1273)
 shape = SubResource("SegmentShape2D_8nhd3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_hojo7")
+autoplay = true
+
+[node name="PickUp" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("15_wdn40")
 
 [connection signal="body_entered" from="level1death" to="level1death" method="_on_body_entered"]

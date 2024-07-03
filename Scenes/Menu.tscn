@@ -1,9 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://db6we0dbhuu0k"]
+[gd_scene load_steps=25 format=3 uid="uid://db6we0dbhuu0k"]
 
 [ext_resource type="Texture2D" uid="uid://di4xj5ek1hj5n" path="res://Assets/Yellow.png" id="1_37hyd"]
 [ext_resource type="FontFile" uid="uid://bgp6rgnwqw5jr" path="res://Assets/GravityRegular5.ttf" id="2_lobq4"]
 [ext_resource type="Texture2D" uid="uid://bbstdwvo4nv2v" path="res://Assets/Melon.png" id="3_vushm"]
 [ext_resource type="Script" path="res://Scripts/lvlselect.gd" id="4_4cvn1"]
+[ext_resource type="AudioStream" uid="uid://bq5f8brqs13k4" path="res://Assets/Music + SFX/menu11.wav" id="5_jy0nl"]
+[ext_resource type="Script" path="res://Scenes/Button2.gd" id="5_seekx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f0wla"]
 atlas = ExtResource("3_vushm")
@@ -161,6 +163,17 @@ theme_override_fonts/normal_font = ExtResource("2_lobq4")
 theme_override_font_sizes/normal_font_size = 100
 text = "Melon Rush"
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+modulate = Color(0.376471, 0.376471, 0.376471, 1)
+layout_mode = 0
+offset_left = 690.0
+offset_top = 1066.0
+offset_right = 1752.0
+offset_bottom = 1480.0
+theme_override_fonts/normal_font = ExtResource("2_lobq4")
+theme_override_font_sizes/normal_font_size = 20
+text = "a small game made by swarit choudhari"
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1060, 576)
@@ -188,6 +201,11 @@ offset_right = 1703.0
 offset_bottom = 952.0
 theme_override_fonts/font = ExtResource("2_lobq4")
 theme_override_font_sizes/font_size = 40
-text = "Credits"
+text = "Play"
+script = ExtResource("5_seekx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jy0nl")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

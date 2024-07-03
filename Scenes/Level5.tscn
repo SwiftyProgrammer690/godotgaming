@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://oq8q4xky1lk2"]
+[gd_scene load_steps=23 format=3 uid="uid://oq8q4xky1lk2"]
 
 [ext_resource type="Texture2D" uid="uid://dk1w5jqlv8xht" path="res://Assets/FreeCuteTileset/Tileset.png" id="1_5l5a4"]
 [ext_resource type="FontFile" uid="uid://bgp6rgnwqw5jr" path="res://Assets/GravityRegular5.ttf" id="2_bvkra"]
@@ -9,8 +9,12 @@
 [ext_resource type="Script" path="res://Scripts/WorldBoundary.gd" id="7_qgpxx"]
 [ext_resource type="PackedScene" uid="uid://ds37wqovita3t" path="res://Scenes/flag.tscn" id="8_aoi0h"]
 [ext_resource type="PackedScene" uid="uid://pgg2vj5584kp" path="res://Scenes/Strawberry.tscn" id="9_5enb0"]
+[ext_resource type="PackedScene" uid="uid://7gi14mj44l8b" path="res://Scenes/Level6.tscn" id="9_x07ob"]
 [ext_resource type="PackedScene" uid="uid://cbk6yjkwwm2cn" path="res://Scenes/Kiwi.tscn" id="11_qwmno"]
 [ext_resource type="PackedScene" uid="uid://4cda0pg0r3ve" path="res://Scenes/Melon.tscn" id="12_tgh3a"]
+[ext_resource type="AudioStream" uid="uid://cetey37rn6jvl" path="res://Assets/Music + SFX/downwardssuperfixed.wav" id="12_ylhle"]
+[ext_resource type="AudioStream" uid="uid://oh0ixxo5jdep" path="res://Assets/Music + SFX/sound (2).wav" id="13_4fun7"]
+[ext_resource type="AudioStream" uid="uid://bfo87ryl1tvar" path="res://Assets/Music + SFX/hitHurt.wav" id="15_rfc15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qaww"]
 texture = ExtResource("6_equwm")
@@ -888,6 +892,7 @@ shape = SubResource("WorldBoundaryShape2D_r5hxk")
 
 [node name="FlagBearerPiper" parent="." instance=ExtResource("8_aoi0h")]
 position = Vector2(4571, 1840)
+nxtLevel = ExtResource("9_x07ob")
 
 [node name="Kiwi" parent="." instance=ExtResource("11_qwmno")]
 position = Vector2(2804, 1520)
@@ -933,5 +938,17 @@ position = Vector2(2813, 798)
 
 [node name="Strawberry" parent="." instance=ExtResource("9_5enb0")]
 position = Vector2(1540, 893)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ylhle")
+autoplay = true
+
+[node name="PickUp" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("13_4fun7")
+
+[node name="boom" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("15_rfc15")
 
 [connection signal="body_entered" from="WorldBoundary" to="WorldBoundary" method="_on_body_entered"]

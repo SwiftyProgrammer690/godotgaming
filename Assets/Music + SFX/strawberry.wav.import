@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://lfo3eakxeaaa"
-path="res://.godot/imported/sound (3).wav-c1e40a151cc91572d44ce6d6dfe6f395.sample"
+path="res://.godot/imported/strawberry.wav-e65b807727053b24763d3bbbcb92f48d.sample"
 
 [deps]
 
-source_file="res://Assets/Music + SFX/sound (3).wav"
-dest_files=["res://.godot/imported/sound (3).wav-c1e40a151cc91572d44ce6d6dfe6f395.sample"]
+source_file="res://Assets/Music + SFX/strawberry.wav"
+dest_files=["res://.godot/imported/strawberry.wav-e65b807727053b24763d3bbbcb92f48d.sample"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://7gi14mj44l8b"]
+[gd_scene load_steps=19 format=3 uid="uid://7gi14mj44l8b"]
 
 [ext_resource type="Texture2D" uid="uid://d4ckwmgeao7yw" path="res://Assets/FreeCuteTileset/Dungeon Tile Set.png" id="1_pc4tb"]
 [ext_resource type="Texture2D" uid="uid://dk1w5jqlv8xht" path="res://Assets/FreeCuteTileset/Tileset.png" id="2_mdb5n"]
@@ -8,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://8s5ouwfvydxb" path="res://Assets/pixil-frame-0.png" id="6_8rrfe"]
 [ext_resource type="Script" path="res://Scripts/WorldBoundary.gd" id="7_ebigw"]
 [ext_resource type="PackedScene" uid="uid://bcyxhfv7godui" path="res://Scenes/GMelon.tscn" id="8_x6ljd"]
+[ext_resource type="AudioStream" uid="uid://oh0ixxo5jdep" path="res://Assets/Music + SFX/sound (2).wav" id="9_yj357"]
+[ext_resource type="AudioStream" uid="uid://cetey37rn6jvl" path="res://Assets/Music + SFX/downwardssuperfixed.wav" id="10_fnkm5"]
+[ext_resource type="PackedScene" uid="uid://ds37wqovita3t" path="res://Scenes/flag.tscn" id="11_p105w"]
+[ext_resource type="PackedScene" uid="uid://b378vtsmg8gh" path="res://Scenes/Winning.tscn" id="12_lt8lb"]
+[ext_resource type="AudioStream" uid="uid://bfo87ryl1tvar" path="res://Assets/Music + SFX/hitHurt.wav" id="13_6ilge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qaww"]
 texture = ExtResource("1_pc4tb")
@@ -717,5 +722,21 @@ shape = SubResource("WorldBoundaryShape2D_r5hxk")
 
 [node name="GMelon" parent="." instance=ExtResource("8_x6ljd")]
 position = Vector2(-650, -6628)
+
+[node name="PickUp" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("9_yj357")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_fnkm5")
+autoplay = true
+
+[node name="FlagBearerPiper" parent="." instance=ExtResource("11_p105w")]
+position = Vector2(-14, -9285)
+nxtLevel = ExtResource("12_lt8lb")
+
+[node name="boom" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("13_6ilge")
 
 [connection signal="body_entered" from="WorldBoundary" to="WorldBoundary" method="_on_body_entered"]

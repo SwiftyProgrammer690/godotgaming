@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://b378vtsmg8gh"]
+
+[ext_resource type="Script" path="res://Scripts/controlmusic.gd" id="1_s6cc2"]
+[ext_resource type="Texture2D" uid="uid://di4xj5ek1hj5n" path="res://Assets/Yellow.png" id="2_xhaxc"]
+[ext_resource type="FontFile" uid="uid://bgp6rgnwqw5jr" path="res://Assets/GravityRegular5.ttf" id="3_jwofq"]
+[ext_resource type="Script" path="res://Scripts/Button.gd" id="11_im60w"]
+[ext_resource type="AudioStream" uid="uid://bq5f8brqs13k4" path="res://Assets/Music + SFX/menu11.wav" id="12_morhr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s6cc2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xhaxc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0.376471, 0.376471, 0.376471, 1)
+layout_mode = 0
+offset_left = 686.0
+offset_top = 176.0
+offset_right = 1998.0
+offset_bottom = 590.0
+theme_override_fonts/normal_font = ExtResource("3_jwofq")
+theme_override_font_sizes/normal_font_size = 100
+text = "You Win!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+modulate = Color(0.376471, 0.376471, 0.376471, 1)
+layout_mode = 0
+offset_left = 714.0
+offset_top = 384.0
+offset_right = 2026.0
+offset_bottom = 798.0
+theme_override_fonts/normal_font = ExtResource("3_jwofq")
+theme_override_font_sizes/normal_font_size = 50
+text = "Congratulations!
+
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+modulate = Color(0.376471, 0.376471, 0.376471, 1)
+layout_mode = 0
+offset_left = 462.0
+offset_top = 496.0
+offset_right = 1774.0
+offset_bottom = 910.0
+theme_override_fonts/normal_font = ExtResource("3_jwofq")
+theme_override_font_sizes/normal_font_size = 50
+text = "Hope you enjoyed my game
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 716.0
+offset_right = 1296.0
+offset_bottom = 904.0
+theme_override_fonts/font = ExtResource("3_jwofq")
+theme_override_font_sizes/font_size = 40
+text = "Home"
+script = ExtResource("11_im60w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_morhr")
+autoplay = true

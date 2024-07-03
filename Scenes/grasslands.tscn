@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgnqwu1d5rf4e"]
-
-[ext_resource type="AudioStream" uid="uid://cwp8c1usorkuk" path="res://Assets/Music + SFX/grasslands.wav" id="1_cu3ic"]
-
-[node name="Grasslands" type="AudioStreamPlayer"]
-stream = ExtResource("1_cu3ic")
-autoplay = true

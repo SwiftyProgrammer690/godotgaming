@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ydkxcsfckmup"]
+[gd_scene load_steps=22 format=3 uid="uid://ydkxcsfckmup"]
 
 [ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="2_lob0g"]
 [ext_resource type="Texture2D" uid="uid://dk1w5jqlv8xht" path="res://Assets/FreeCuteTileset/Tileset.png" id="3_8twqo"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://qqdwtgvq3c6n" path="res://Scenes/Pineapple.tscn" id="10_rp6n3"]
 [ext_resource type="PackedScene" uid="uid://4cda0pg0r3ve" path="res://Scenes/Melon.tscn" id="11_0maj0"]
 [ext_resource type="PackedScene" uid="uid://cbk6yjkwwm2cn" path="res://Scenes/Kiwi.tscn" id="11_qlfjn"]
+[ext_resource type="AudioStream" uid="uid://cetey37rn6jvl" path="res://Assets/Music + SFX/downwardssuperfixed.wav" id="14_1voxb"]
+[ext_resource type="AudioStream" uid="uid://oh0ixxo5jdep" path="res://Assets/Music + SFX/sound (2).wav" id="15_w8cx7"]
+[ext_resource type="AudioStream" uid="uid://bfo87ryl1tvar" path="res://Assets/Music + SFX/hitHurt.wav" id="16_s6d82"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mg31"]
 texture = ExtResource("3_8twqo")
@@ -740,5 +743,17 @@ position = Vector2(4018, 1622)
 
 [node name="Melon10" parent="." instance=ExtResource("11_0maj0")]
 position = Vector2(4247, 1868)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_1voxb")
+autoplay = true
+
+[node name="PickUp" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("15_w8cx7")
+
+[node name="boom" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("16_s6d82")
 
 [connection signal="body_entered" from="WorldBoundary" to="WorldBoundary" method="_on_body_entered"]
