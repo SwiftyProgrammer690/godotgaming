@@ -7,6 +7,6 @@ func _on_body_entered(body):
 		var x_delta = body.position.x - position.x
 		points.decrease_lives()
 		if (x_delta < 0):
-			body.jump_away(-500)
+			body.jump_away(-1000)
 		else:
-			body.jump_away(500)
+			body.jump_away(1000)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dq0v5b0lbej6"]
+[gd_scene load_steps=21 format=3 uid="uid://dq0v5b0lbej6"]
 
 [ext_resource type="Texture2D" uid="uid://di4xj5ek1hj5n" path="res://Assets/Yellow.png" id="1_qsmv0"]
 [ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="2_lqqnj"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ds37wqovita3t" path="res://Scenes/flag.tscn" id="11_aevxr"]
 [ext_resource type="Texture2D" uid="uid://d4ckwmgeao7yw" path="res://Assets/FreeCuteTileset/Dungeon Tile Set.png" id="11_trp7d"]
 [ext_resource type="Script" path="res://Scripts/WorldBoundary.gd" id="13_hb2gp"]
+[ext_resource type="PackedScene" uid="uid://cmtrllk2ebu3w" path="res://Scenes/Level3.tscn" id="15_25f8r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mg31"]
 texture = ExtResource("3_no8tf")
@@ -505,5 +506,6 @@ shape = SubResource("WorldBoundaryShape2D_r5hxk")
 
 [node name="FlagBearerPiper" parent="." instance=ExtResource("11_aevxr")]
 position = Vector2(4603, 718)
+nxtLevel = ExtResource("15_25f8r")
 
 [connection signal="body_entered" from="WorldBoundary" to="WorldBoundary" method="_on_body_entered"]
