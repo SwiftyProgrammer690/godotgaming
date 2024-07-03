@@ -1,21 +1,20 @@
-[gd_scene load_steps=19 format=3 uid="uid://ydkxcsfckmup"]
+[gd_scene load_steps=18 format=3 uid="uid://oq8q4xky1lk2"]
 
-[ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="2_lob0g"]
-[ext_resource type="Texture2D" uid="uid://dk1w5jqlv8xht" path="res://Assets/FreeCuteTileset/Tileset.png" id="3_8twqo"]
-[ext_resource type="Script" path="res://Scripts/Points.gd" id="4_xlqdv"]
-[ext_resource type="FontFile" uid="uid://bgp6rgnwqw5jr" path="res://Assets/GravityRegular5.ttf" id="5_qe4t8"]
-[ext_resource type="Texture2D" uid="uid://8s5ouwfvydxb" path="res://Assets/pixil-frame-0.png" id="6_pd7u5"]
-[ext_resource type="Texture2D" uid="uid://d4ckwmgeao7yw" path="res://Assets/FreeCuteTileset/Dungeon Tile Set.png" id="7_uh7af"]
-[ext_resource type="Script" path="res://Scripts/WorldBoundary.gd" id="8_es5hh"]
-[ext_resource type="PackedScene" uid="uid://oq8q4xky1lk2" path="res://Scenes/Level5.tscn" id="9_4eofl"]
-[ext_resource type="PackedScene" uid="uid://ds37wqovita3t" path="res://Scenes/flag.tscn" id="9_wb147"]
-[ext_resource type="PackedScene" uid="uid://pgg2vj5584kp" path="res://Scenes/Strawberry.tscn" id="10_6jsfs"]
-[ext_resource type="PackedScene" uid="uid://qqdwtgvq3c6n" path="res://Scenes/Pineapple.tscn" id="10_rp6n3"]
-[ext_resource type="PackedScene" uid="uid://4cda0pg0r3ve" path="res://Scenes/Melon.tscn" id="11_0maj0"]
-[ext_resource type="PackedScene" uid="uid://cbk6yjkwwm2cn" path="res://Scenes/Kiwi.tscn" id="11_qlfjn"]
+[ext_resource type="Texture2D" uid="uid://dk1w5jqlv8xht" path="res://Assets/FreeCuteTileset/Tileset.png" id="1_5l5a4"]
+[ext_resource type="FontFile" uid="uid://bgp6rgnwqw5jr" path="res://Assets/GravityRegular5.ttf" id="2_bvkra"]
+[ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="3_lvm2m"]
+[ext_resource type="Script" path="res://Scripts/Points.gd" id="4_qkawe"]
+[ext_resource type="Texture2D" uid="uid://8s5ouwfvydxb" path="res://Assets/pixil-frame-0.png" id="5_y6svi"]
+[ext_resource type="Texture2D" uid="uid://d4ckwmgeao7yw" path="res://Assets/FreeCuteTileset/Dungeon Tile Set.png" id="6_equwm"]
+[ext_resource type="Script" path="res://Scripts/WorldBoundary.gd" id="7_qgpxx"]
+[ext_resource type="PackedScene" uid="uid://ds37wqovita3t" path="res://Scenes/flag.tscn" id="8_aoi0h"]
+[ext_resource type="PackedScene" uid="uid://pgg2vj5584kp" path="res://Scenes/Strawberry.tscn" id="9_5enb0"]
+[ext_resource type="PackedScene" uid="uid://qqdwtgvq3c6n" path="res://Scenes/Pineapple.tscn" id="10_i3wpw"]
+[ext_resource type="PackedScene" uid="uid://cbk6yjkwwm2cn" path="res://Scenes/Kiwi.tscn" id="11_qwmno"]
+[ext_resource type="PackedScene" uid="uid://4cda0pg0r3ve" path="res://Scenes/Melon.tscn" id="12_tgh3a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mg31"]
-texture = ExtResource("3_8twqo")
+texture = ExtResource("1_5l5a4")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -169,7 +168,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1mg31")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qaww"]
-texture = ExtResource("7_uh7af")
+texture = ExtResource("6_equwm")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
@@ -603,19 +602,19 @@ offset_left = 1175.0
 offset_top = 889.0
 offset_right = 1817.0
 offset_bottom = 1281.0
-theme_override_fonts/normal_font = ExtResource("5_qe4t8")
+theme_override_fonts/normal_font = ExtResource("2_bvkra")
 theme_override_font_sizes/normal_font_size = 30
 text = "Welcome to the
 
 underground "
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_lob0g")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("3_lvm2m")]
 top_level = true
 position = Vector2(971, 916)
 
 [node name="Points" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
-script = ExtResource("4_xlqdv")
+script = ExtResource("4_qkawe")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/heart"), NodePath("../UI/Hearts/HBoxContainer/heart2"), NodePath("../UI/Hearts/HBoxContainer/heart3")]
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -635,7 +634,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("5_qe4t8")
+theme_override_fonts/font = ExtResource("2_bvkra")
 theme_override_font_sizes/font_size = 30
 text = "Melons: 0 "
 horizontal_alignment = 1
@@ -669,19 +668,19 @@ alignment = 1
 [node name="heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_pd7u5")
+texture = ExtResource("5_y6svi")
 expand_mode = 2
 
 [node name="heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_pd7u5")
+texture = ExtResource("5_y6svi")
 expand_mode = 2
 
 [node name="heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_pd7u5")
+texture = ExtResource("5_y6svi")
 expand_mode = 2
 
 [node name="TileMap2" type="TileMap" parent="."]
@@ -692,53 +691,52 @@ format = 2
 layer_0/tile_data = PackedInt32Array(851979, 131072, 10, 851980, 196608, 10, 851978, 65536, 10, 983055, 65536, 10, 983056, 131072, 10, 983057, 196608, 10, 655374, 65536, 10, 655375, 131072, 10, 655376, 196608, 10, 786454, 65536, 10, 786455, 131072, 10, 786456, 196608, 10, 1179674, 65536, 10, 1179675, 131072, 10, 1179676, 196608, 10, 1310754, 65536, 10, 1310755, 131072, 10, 1310756, 196608, 10, 1179686, 65536, 10, 1179687, 131072, 10, 1179688, 196608, 10, 1179692, 65536, 10, 1179693, 131072, 10, 1179694, 196608, 10, 1376304, 65536, 10, 1376305, 131072, 10, 1376306, 196608, 10, 1572916, 65536, 10, 1572917, 131072, 10, 1572918, 65536, 10, 1572919, 131072, 10, 1572920, 65536, 10, 1572921, 131072, 10, 1572922, 196608, 10, 1572923, 65536, 10, 1572924, 131072, 10, 1572925, 196608, 10, 589840, 655360, 10, 720918, 655360, 10, 720919, 655360, 10, 655382, 655360, 10, 1114138, 720896, 12, 917520, 655360, 12, 1507382, 655360, 12, 1507389, 655360, 12, 1507388, 655360, 12, 1507387, 655360, 12, 1507386, 655360, 12, 1441852, 655360, 12, 1441851, 786432, 12, 1376316, 786432, 12, 1376315, 786432, 12)
 
 [node name="WorldBoundary" type="Area2D" parent="."]
-script = ExtResource("8_es5hh")
+script = ExtResource("7_qgpxx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundary"]
 position = Vector2(2224, 2474)
 shape = SubResource("WorldBoundaryShape2D_r5hxk")
 
-[node name="FlagBearerPiper" parent="." instance=ExtResource("9_wb147")]
+[node name="FlagBearerPiper" parent="." instance=ExtResource("8_aoi0h")]
 position = Vector2(4571, 1766)
-nxtLevel = ExtResource("9_4eofl")
 
-[node name="Strawberry" parent="." instance=ExtResource("10_6jsfs")]
+[node name="Strawberry" parent="." instance=ExtResource("9_5enb0")]
 position = Vector2(1316, 1059)
 
-[node name="Pineapple" parent="." instance=ExtResource("10_rp6n3")]
+[node name="Pineapple" parent="." instance=ExtResource("10_i3wpw")]
 position = Vector2(2201, 1376)
 
-[node name="Kiwi" parent="." instance=ExtResource("11_qlfjn")]
+[node name="Kiwi" parent="." instance=ExtResource("11_qwmno")]
 position = Vector2(3632, 1370)
 
-[node name="Melon" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(865, 985)
 
-[node name="Melon2" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon2" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(1202, 750)
 
-[node name="Melon3" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon3" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(1802, 886)
 
-[node name="Melon4" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon4" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(1943, 886)
 
-[node name="Melon5" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon5" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(2834, 1537)
 
-[node name="Melon6" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon6" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(3088, 1390)
 
-[node name="Melon7" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon7" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(3215, 1390)
 
-[node name="Melon8" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon8" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(3894, 1622)
 
-[node name="Melon9" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon9" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(4018, 1622)
 
-[node name="Melon10" parent="." instance=ExtResource("11_0maj0")]
+[node name="Melon10" parent="." instance=ExtResource("12_tgh3a")]
 position = Vector2(4247, 1868)
 
 [connection signal="body_entered" from="WorldBoundary" to="WorldBoundary" method="_on_body_entered"]

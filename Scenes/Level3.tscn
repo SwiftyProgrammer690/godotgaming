@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cmtrllk2ebu3w"]
+[gd_scene load_steps=19 format=3 uid="uid://cmtrllk2ebu3w"]
 
 [ext_resource type="Texture2D" uid="uid://dnme5tmkw2n18" path="res://Assets/FreeCuteTileset/Purple.png" id="1_v60ci"]
 [ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="2_r7u2m"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://8s5ouwfvydxb" path="res://Assets/pixil-frame-0.png" id="6_n2bjy"]
 [ext_resource type="PackedScene" uid="uid://bpoxcqm82ynx" path="res://Scenes/spike_ground.tscn" id="8_gkjdu"]
 [ext_resource type="PackedScene" uid="uid://pgg2vj5584kp" path="res://Scenes/Strawberry.tscn" id="9_jwud5"]
+[ext_resource type="PackedScene" uid="uid://ydkxcsfckmup" path="res://Scenes/Level4.tscn" id="10_7ln1b"]
 [ext_resource type="PackedScene" uid="uid://4cda0pg0r3ve" path="res://Scenes/Melon.tscn" id="10_wh1u1"]
 [ext_resource type="Texture2D" uid="uid://d4ckwmgeao7yw" path="res://Assets/FreeCuteTileset/Dungeon Tile Set.png" id="11_e53yl"]
 [ext_resource type="Script" path="res://Scripts/WorldBoundary.gd" id="13_5k7v5"]
@@ -715,6 +716,7 @@ shape = SubResource("WorldBoundaryShape2D_r5hxk")
 
 [node name="FlagBearerPiper" parent="." instance=ExtResource("14_5khuf")]
 position = Vector2(4365, 954)
+nxtLevel = ExtResource("10_7ln1b")
 
 [node name="Strawberry" parent="." instance=ExtResource("9_jwud5")]
 position = Vector2(423, 495)
