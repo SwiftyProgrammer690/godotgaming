@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b0sk2kg1kgla4"]
+[gd_scene load_steps=26 format=3 uid="uid://b0sk2kg1kgla4"]
 
 [ext_resource type="PackedScene" uid="uid://db0mgwf3r3sw8" path="res://Scenes/Player.tscn" id="1_35rep"]
 [ext_resource type="Texture2D" uid="uid://dk1w5jqlv8xht" path="res://Assets/FreeCuteTileset/Tileset.png" id="2_g0i5u"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://ds37wqovita3t" path="res://Scenes/flag.tscn" id="20_5d1ki"]
 [ext_resource type="PackedScene" uid="uid://cr6bog1ihttw7" path="res://Scenes/Level1.tscn" id="21_v5gla"]
 [ext_resource type="AudioStream" uid="uid://crk762axdqn34" path="res://Assets/Music + SFX/superskibidi.wav" id="22_h00o4"]
+[ext_resource type="AudioStream" uid="uid://oh0ixxo5jdep" path="res://Assets/Music + SFX/sound (2).wav" id="23_dgbio"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mg31"]
 texture = ExtResource("2_g0i5u")
@@ -464,3 +465,7 @@ nxtLevel = ExtResource("21_v5gla")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_h00o4")
 autoplay = true
+
+[node name="PickUp" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("23_dgbio")

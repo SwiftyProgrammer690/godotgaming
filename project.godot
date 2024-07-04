@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=2152
 window/size/viewport_height=1200
+window/size/resizable=false
 
 [importer_defaults]
 
